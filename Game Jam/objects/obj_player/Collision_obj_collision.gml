@@ -8,7 +8,7 @@ function is_on_left_side() {
                         physics_test_overlap(bbox_left + 2, bbox_bottom- 2, direction, obj_collision); 
 }
 
-if abs(phy_linear_velocity_x) > 300 {
+if obj_game_controller.current_speed >= 10 {
     var _crash = false
     var _move_force = move_force * 1.5
     if is_on_left_side(){
@@ -19,9 +19,9 @@ if abs(phy_linear_velocity_x) > 300 {
     }
     
     if _crash {
-        if obj_jumps.jumps > 0 {
+        if obj_game_controller.jumps > 0 {
             physics_apply_impulse(x, y, _move_force, -jump_force*1.5)
-            obj_jumps.jumps--
+            obj_game_controller.jumps--
         } else {
             alarm_set(0, 25)
             physics_apply_impulse(x, y, 0, -jump_force*4)

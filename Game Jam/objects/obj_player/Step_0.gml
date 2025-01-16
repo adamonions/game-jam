@@ -9,23 +9,21 @@ function is_ground_above() {
 }
 
 function get_jump_force() {
-    var _speed = obj_jumps.current_speed
-    return -jump_force * (1 + _speed/10)
+    return -jump_force * (1 + obj_game_controller.current_speed/10)
 }
 
-if(keyboard_check(vk_left)){
+if(keyboard_check(vk_left) || keyboard_check(ord("A"))){
     physics_apply_local_force(x, y, - move_force, 0)
 } 
-if(keyboard_check(vk_right)){
+if(keyboard_check(vk_right) || keyboard_check(ord("D"))){
     physics_apply_local_force(x, y, move_force, 0)
 }
-if(keyboard_check_pressed(vk_up) && is_on_ground()){
-    show_debug_message("{0} Jumps remaining", obj_jumps.jumps)
-    if obj_jumps.jumps > 0 && !is_ground_above(){
-        physics_apply_impulse(other.x, other.y, 0, get_jump_force())    
-        obj_jumps.jumps--
+if((keyboard_check_pressed(vk_up) || keyboard_check(ord("W"))) && is_on_ground()){
+    if obj_game_controller.jumps > 0 && !is_ground_above(){
+        physics_apply_impulse(x, y, 0, get_jump_force())    
+        obj_game_controller.jumps--
     } 
 }
-if(keyboard_check(vk_down)) {
+if(keyboard_check(vk_down)||keyboard_check(ord("S")||keyboard_check(vk_space))) {
     physics_apply_impulse(x, y, 0, jump_force*0.5)
 }

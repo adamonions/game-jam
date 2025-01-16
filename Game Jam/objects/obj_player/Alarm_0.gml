@@ -1,1 +1,1 @@
-room_goto(Room2)
+obj_game_controller.game_over()

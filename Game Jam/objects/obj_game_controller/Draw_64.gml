@@ -38,8 +38,10 @@ var radius = 50; // Clock face radius
 current_speed = clamp(get_speed(), 0, 10); // Speed as second hand
 
 // Convert values to angles (spread evenly across 10 numerals, rotated so X is at the top)
-var second_angle = -lerp(0, 360, current_speed / 10) + 90; // Second hand
-var hour_angle = -lerp(0, 360, jumps / 10) + 90; // Hour hand
+var second_angle = lerp(previous_second_angle, -lerp(0, 360, current_speed / 10) + 90, 0.1); // Second hand
+previous_second_angle = second_angle
+var hour_angle = lerp(previous_hour_angle, -lerp(0, 360, jumps / 10)+ 90, 0.1); // Hour hand
+previous_hour_angle = hour_angle
 
 // Roman numeral labels (I - X)
 var roman_numerals = [
@@ -48,6 +50,7 @@ var roman_numerals = [
 
 // Draw clock face
 draw_set_color(c_white);
+draw_set_halign(fa_left);
 draw_circle(sx, sy, radius, false);
 draw_set_color(c_black)
 draw_set_font(fnt_roman)
@@ -60,12 +63,38 @@ for (var i = 0; i < 10; i++) {
     draw_text(num_x - 5, num_y - 5, roman_numerals[i]);
 }
 
+// Draw Jumps window
+draw_set_font(fnt_roman_small)
+draw_set_color(c_white)
+draw_set_halign(fa_center)
+var box_width = 20;
+var box_height = 15;
+var left_x = sx + 15;
+var left_y = sy - 20;
+draw_rectangle(left_x, left_y, left_x + box_width, left_y + box_height, true);
+draw_set_color(c_black)
+draw_text(left_x + 5, left_y + 5, "Jumps");
+draw_set_font(fnt_roman)
+draw_text(left_x + 5, left_y + 20, string(jumps));
+
+// Draw Speed window
+draw_set_font(fnt_roman_small)
+draw_set_color(c_white)
+var right_x = sx - 20;
+var right_y = sy - 20;
+draw_rectangle(right_x, right_y, right_x + box_width, right_y + box_height, false);
+draw_set_color(c_black)
+draw_text(right_x + 5, right_y + 5, "Speed");
+draw_set_font(fnt_roman)
+draw_text(right_x + 5, right_y + 20, string(current_speed));
+
 // Draw second hand (speed)
 var sec_length = radius * 0.9;
 var sec_x = sx + lengthdir_x(sec_length, second_angle);
 var sec_y = sy + lengthdir_y(sec_length, second_angle);
 draw_set_color(c_red);
 draw_line(sx, sy, sec_x, sec_y);
+draw_circle(sec_x, sec_y, 3, false);
 
 // Draw hour hand (jumps)
 var hour_length = radius * 0.6;
@@ -73,10 +102,16 @@ var hour_x = sx + lengthdir_x(hour_length, hour_angle);
 var hour_y = sy + lengthdir_y(hour_length, hour_angle);
 draw_set_color(c_blue);
 draw_line(sx, sy, hour_x, hour_y);
+draw_circle(hour_x, hour_y, 5, false);
 
 // Draw center dot
 draw_set_color(c_black);
 draw_circle(sx, sy, 3, false);
+
+
+
+
+
 
 
 
