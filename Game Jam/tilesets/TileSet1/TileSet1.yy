@@ -34,5 +34,5 @@
   "tileWidth":64,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":14,
+  "tile_count":16,
 }
