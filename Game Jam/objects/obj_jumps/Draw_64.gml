@@ -1,12 +1,9 @@
-draw_set_font(fnt_score)
-draw_set_halign(fa_center)
-draw_set_color(c_white);
-draw_text(75,10, string_concat("Jumps \n", jumps))
-
 function get_speed() {
     with(obj_player){
         var _vel = abs(phy_linear_velocity_x)
-        if _vel < 25 {
+        if _vel = 0 {
+            return 0
+        } else if _vel < 25 {
             return 1
         } else if _vel < 50 {
             return 2
@@ -32,46 +29,54 @@ function get_speed() {
     }
 }
 
-// Speedometer position on the screen
-var sx = 500;  // X position of the dial
-var sy = 60;  // Y position of the dial
-var radius = 50; // Radius of the speedometer dial
+// Clock face settings
+var sx = 55; // X position of clock
+var sy = 55; // Y position of clock
+var radius = 50; // Clock face radius
 
-// Get the current speed (0-10)
+// Get values
+current_speed = clamp(get_speed(), 0, 10); // Speed as second hand
 
-current_speed = get_speed();
-show_debug_message(current_speed)
-// Map current speed (0-10) to an angle (-120° to 120°)
-var angle = lerp(-120, 120, current_speed/10);
+// Convert values to angles (spread evenly across 10 numerals, rotated so X is at the top)
+var second_angle = -lerp(0, 360, current_speed / 10) + 90; // Second hand
+var hour_angle = -lerp(0, 360, jumps / 10) + 90; // Hour hand
 
-// Draw the circular dial background
+// Roman numeral labels (I - X)
+var roman_numerals = [
+    "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"
+];
+
+// Draw clock face
 draw_set_color(c_white);
 draw_circle(sx, sy, radius, false);
+draw_set_color(c_black)
+draw_set_font(fnt_roman)
 
-// Draw tick marks (optional)
-draw_set_color(c_gray);
-for (var i = 0; i <= 10; i++) {
-    var tick_angle = lerp(-120, 120, i / 10);
-    var tick_x1 = sx + lengthdir_x(radius * 0.8, tick_angle);
-    var tick_y1 = sy + lengthdir_y(radius * 0.8, tick_angle);
-    var tick_x2 = sx + lengthdir_x(radius, tick_angle);
-    var tick_y2 = sy + lengthdir_y(radius, tick_angle);
-    draw_line(tick_x1, tick_y1, tick_x2, tick_y2);
+// Draw Roman numerals around the face (10 positions, rotated so X is at the top)
+for (var i = 0; i < 10; i++) {
+    var angle = -lerp(0, 360, (i+1) / 10) + 90; // Rotated so X (10) is at the top
+    var num_x = sx + lengthdir_x(radius * 0.85, angle);
+    var num_y = sy + lengthdir_y(radius * 0.85, angle);
+    draw_text(num_x - 5, num_y - 5, roman_numerals[i]);
 }
 
-// Draw the needle
-var needle_length = radius * 0.8;
-var needle_x = sx + lengthdir_x(needle_length, angle);
-var needle_y = sy + lengthdir_y(needle_length, angle);
-
+// Draw second hand (speed)
+var sec_length = radius * 0.9;
+var sec_x = sx + lengthdir_x(sec_length, second_angle);
+var sec_y = sy + lengthdir_y(sec_length, second_angle);
 draw_set_color(c_red);
-draw_line(sx, sy, needle_x, needle_y);
+draw_line(sx, sy, sec_x, sec_y);
 
-// Draw speed value at the bottom
-draw_set_font(fnt_speed)
-if current_speed < 10 {
-    draw_set_color(c_white);
-} else {
-    draw_set_color(c_red);
-}
-draw_text(sx - 10, sy + radius + 15, string(current_speed));
+// Draw hour hand (jumps)
+var hour_length = radius * 0.6;
+var hour_x = sx + lengthdir_x(hour_length, hour_angle);
+var hour_y = sy + lengthdir_y(hour_length, hour_angle);
+draw_set_color(c_blue);
+draw_line(sx, sy, hour_x, hour_y);
+
+// Draw center dot
+draw_set_color(c_black);
+draw_circle(sx, sy, 3, false);
+
+
+

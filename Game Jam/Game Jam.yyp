@@ -30,11 +30,14 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"Game Jam",
   "resources":[
+    {"id":{"name":"fnt_roman_small","path":"fonts/fnt_roman_small/fnt_roman_small.yy",},},
+    {"id":{"name":"fnt_roman","path":"fonts/fnt_roman/fnt_roman.yy",},},
     {"id":{"name":"fnt_score","path":"fonts/fnt_score/fnt_score.yy",},},
+    {"id":{"name":"fnt_speed","path":"fonts/fnt_speed/fnt_speed.yy",},},
     {"id":{"name":"obj_boost","path":"objects/obj_boost/obj_boost.yy",},},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
     {"id":{"name":"obj_end","path":"objects/obj_end/obj_end.yy",},},
@@ -43,6 +46,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"spr_backdrop","path":"sprites/spr_backdrop/spr_backdrop.yy",},},
     {"id":{"name":"spr_boost","path":"sprites/spr_boost/spr_boost.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
@@ -57,6 +61,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

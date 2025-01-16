@@ -138,6 +138,6 @@
     "name":"Default",
     "path":"texturegroups/Default",
   },
-  "TTFName":"/Users/kylecampbell/src/github.com/admamonions/game-jam/Game Jam/fonts/fnt_basic/Pro Racing.otf",
+  "TTFName":"/Users/kylecampbell/src/github.com/admamonions/game-jam/Game Jam/fonts/fnt_speed/Pro Racing.otf",
   "usesSDF":false,
 }
