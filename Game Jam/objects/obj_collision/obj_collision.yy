@@ -23,9 +23,9 @@
   "physicsShape":1,
   "physicsShapePoints":[
     {"x":0.0,"y":0.0,},
-    {"x":62.0,"y":0.0,},
-    {"x":62.0,"y":63.0,},
-    {"x":0.0,"y":63.0,},
+    {"x":32.0,"y":0.0,},
+    {"x":32.0,"y":32.0,},
+    {"x":0.0,"y":32.0,},
   ],
   "physicsStartAwake":false,
   "properties":[],
