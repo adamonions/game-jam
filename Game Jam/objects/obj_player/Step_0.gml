@@ -21,3 +21,6 @@ if(keyboard_check_pressed(vk_up) && is_on_ground()){
         obj_jumps.jumps--
     } 
 }
+if(keyboard_check(vk_down)) {
+    physics_apply_impulse(x, y, 0, jump_force)
+}
