@@ -1,5 +1,5 @@
 if current_index == 0 {
-    obj_jumps.jumps++
-    sprite_index=1
-    current_index++
+    obj_game_controller.jumps+=number_of_boosts
+    image_index=1
+    current_index = 1
 }

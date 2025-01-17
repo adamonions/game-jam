@@ -1,0 +1,1 @@
+obj_game_controller.game_over()

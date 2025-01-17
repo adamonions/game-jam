@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy",
+  "%Name":"obj_exit",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_enemy",
+  "name":"obj_exit",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -16,7 +14,7 @@
   "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
-  "physicsDensity":0.5,
+  "physicsDensity":0.0,
   "physicsFriction":0.2,
   "physicsGroup":1,
   "physicsKinematic":false,
@@ -25,20 +23,19 @@
   "physicsRestitution":0.1,
   "physicsSensor":false,
   "physicsShape":1,
-  "physicsShapePoints":[
-    {"x":0.0,"y":0.0,},
-    {"x":43.0,"y":0.0,},
-    {"x":43.0,"y":46.0,},
-    {"x":0.0,"y":46.0,},
-  ],
+  "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"next_room","filters":[
+        "GMRoom",
+      ],"listItems":[],"multiselect":false,"name":"next_room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy",
-    "path":"sprites/spr_enemy/spr_enemy.yy",
+    "name":"spr_end",
+    "path":"sprites/spr_end/spr_end.yy",
   },
   "spriteMaskId":null,
   "visible":true,
