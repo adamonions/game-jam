@@ -9,21 +9,39 @@ function is_ground_above() {
 }
 
 function get_jump_force() {
-    return -jump_force * (1 + obj_game_controller.current_speed/10)
+    return -jump_force * (1 + obj_game_controller.current_speed/5 + obj_game_controller.jumps/5)
 }
 
-if(keyboard_check(vk_left) || keyboard_check(ord("A"))){
-    physics_apply_local_force(x, y, - move_force, 0)
-} 
-if(keyboard_check(vk_right) || keyboard_check(ord("D"))){
-    physics_apply_local_force(x, y, move_force, 0)
+function get_keys(keys) {
+    for (var i = 0; i < array_length(keys); i++) {
+            if (keyboard_check(keys[i])) {
+                return true
+            }
+        }
+    return false;
 }
-if((keyboard_check_pressed(vk_up) || keyboard_check(ord("W"))) && is_on_ground()){
+
+function get_keys_pressed(keys) {
+    for (var i = 0; i < array_length(keys); i++) {
+            if (keyboard_check_pressed(keys[i])) {
+                return true
+            }
+        }
+    return false;    
+}
+
+if get_keys_pressed([vk_up, vk_space, ord("W")]) {
     if obj_game_controller.jumps > 0 && !is_ground_above(){
         physics_apply_impulse(x, y, 0, get_jump_force())    
         obj_game_controller.jumps--
     } 
 }
-if(keyboard_check(vk_down)||keyboard_check(ord("S")||keyboard_check(vk_space))) {
+if get_keys([vk_left, ord("A")]) {
+    physics_apply_local_force(x, y, - move_force, 0)
+}
+if get_keys([vk_right, ord("D")]) {
+    physics_apply_local_force(x, y, move_force, 0)
+}
+if get_keys([vk_down, ord("S")]) {
     physics_apply_impulse(x, y, 0, jump_force*0.5)
 }
