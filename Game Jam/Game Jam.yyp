@@ -77,12 +77,12 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"start","path":"rooms/start/start.yy",},},
-    {"roomId":{"name":"level5","path":"rooms/level5/level5.yy",},},
-    {"roomId":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
-    {"roomId":{"name":"level2","path":"rooms/level2/level2.yy",},},
     {"roomId":{"name":"level1","path":"rooms/level1/level1.yy",},},
+    {"roomId":{"name":"level2","path":"rooms/level2/level2.yy",},},
     {"roomId":{"name":"level3","path":"rooms/level3/level3.yy",},},
+    {"roomId":{"name":"level5","path":"rooms/level5/level5.yy",},},
     {"roomId":{"name":"winroom","path":"rooms/winroom/winroom.yy",},},
+    {"roomId":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
