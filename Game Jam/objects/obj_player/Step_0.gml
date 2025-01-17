@@ -44,3 +44,7 @@ if get_keys([vk_right, ord("D")]) {
 if get_keys([vk_down, ord("S")]) {
     physics_apply_impulse(x, y, 0, jump_force*0.5)
 }
+if get_keys([vk_escape, ord("R")]) {
+    room_goto(obj_spawn.current_room)
+	
+}

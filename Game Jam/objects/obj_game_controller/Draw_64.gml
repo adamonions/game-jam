@@ -108,12 +108,6 @@ draw_circle(hour_x, hour_y, 5, false);
 draw_set_color(c_black);
 draw_circle(sx, sy, 3, false);
 
-// Draw Restart 
-var _sprite_width = 82
-var _sprite_height = 82
-var _screen_x = (display_get_gui_width()) - (_sprite_width + 10 );
-var _screen_y = (display_get_gui_height() - _sprite_height); 
-draw_sprite_stretched(spr_restart, 1, _screen_x, _screen_y, _sprite_width,_sprite_height)
 
 
 
