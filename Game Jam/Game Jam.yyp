@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"Game Jam",
   "resources":[
@@ -57,8 +57,10 @@
     {"id":{"name":"spr_end","path":"sprites/spr_end/spr_end.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_map","path":"sprites/spr_map/spr_map.yy",},},
+    {"id":{"name":"spr_play","path":"sprites/spr_play/spr_play.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_spawn","path":"sprites/spr_spawn/spr_spawn.yy",},},
+    {"id":{"name":"spr_trampoline","path":"sprites/spr_trampoline/spr_trampoline.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
   ],
   "resourceType":"GMProject",

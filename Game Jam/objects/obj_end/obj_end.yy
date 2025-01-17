@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_spawn",
+  "%Name":"obj_end",
   "eventList":[],
   "managed":true,
-  "name":"obj_spawn",
+  "name":"obj_end",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_spawn",
-    "path":"sprites/spr_spawn/spr_spawn.yy",
+    "name":"spr_end",
+    "path":"sprites/spr_end/spr_end.yy",
   },
   "spriteMaskId":null,
   "visible":true,
