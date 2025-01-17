@@ -1,6 +1,5 @@
 function is_on_ground() {
-    return physics_test_overlap(bbox_left + 2, bbox_bottom + 2, direction,  obj_collision) ||
-           physics_test_overlap(bbox_right - 2, bbox_bottom + 2, direction, obj_collision);
+    return phy_linear_velocity_y == 0
 }
 
 function is_ground_above() {
@@ -31,7 +30,7 @@ function get_keys_pressed(keys) {
 }
 
 if get_keys_pressed([vk_up, vk_space, ord("W")]) {
-    if obj_game_controller.jumps > 0 && !is_ground_above(){
+    if is_on_ground() && obj_game_controller.jumps > 0 && !is_ground_above(){
         physics_apply_impulse(x, y, 0, get_jump_force())    
         obj_game_controller.jumps--
     } 

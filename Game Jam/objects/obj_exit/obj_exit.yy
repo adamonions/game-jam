@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_boost",
+  "%Name":"obj_exit",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_boost",
+  "name":"obj_exit",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -27,14 +26,16 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"number_of_boosts","filters":[],"listItems":[],"multiselect":false,"name":"number_of_boosts","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"next_room","filters":[
+        "GMRoom",
+      ],"listItems":[],"multiselect":false,"name":"next_room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_boost",
-    "path":"sprites/spr_boost/spr_boost.yy",
+    "name":"spr_end",
+    "path":"sprites/spr_end/spr_end.yy",
   },
   "spriteMaskId":null,
   "visible":true,

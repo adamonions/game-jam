@@ -1,2 +1,2 @@
-current_index = 0 
+current_index = 0
 image_speed = 0

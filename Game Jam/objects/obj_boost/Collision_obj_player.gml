@@ -1,6 +1,5 @@
-show_debug_message(sprite_index)
 if current_index == 0 {
-    obj_game_controller.jumps++
-    sprite_index=2
-    current_index++
+    obj_game_controller.jumps+=number_of_boosts
+    image_index=1
+    current_index = 1
 }
