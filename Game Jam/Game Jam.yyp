@@ -49,6 +49,8 @@
     {"id":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},},
     {"id":{"name":"obj_spring","path":"objects/obj_spring/obj_spring.yy",},},
     {"id":{"name":"obj_start_button","path":"objects/obj_start_button/obj_start_button.yy",},},
+    {"id":{"name":"level2","path":"rooms/level2/level2.yy",},},
+    {"id":{"name":"level5","path":"rooms/level5/level5.yy",},},
     {"id":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"start","path":"rooms/start/start.yy",},},
@@ -72,7 +74,9 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"start","path":"rooms/start/start.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"level5","path":"rooms/level5/level5.yy",},},
     {"roomId":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
+    {"roomId":{"name":"level2","path":"rooms/level2/level2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
