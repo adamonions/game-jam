@@ -57,6 +57,8 @@
     {"id":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
     {"id":{"name":"start","path":"rooms/start/start.yy",},},
     {"id":{"name":"winroom","path":"rooms/winroom/winroom.yy",},},
+    {"id":{"name":"Replay","path":"sprites/Replay/Replay.yy",},},
+    {"id":{"name":"spr_backdrop_end","path":"sprites/spr_backdrop_end/spr_backdrop_end.yy",},},
     {"id":{"name":"spr_backdrop_start","path":"sprites/spr_backdrop_start/spr_backdrop_start.yy",},},
     {"id":{"name":"spr_backdrop","path":"sprites/spr_backdrop/spr_backdrop.yy",},},
     {"id":{"name":"spr_boost","path":"sprites/spr_boost/spr_boost.yy",},},
