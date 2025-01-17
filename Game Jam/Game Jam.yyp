@@ -34,6 +34,7 @@
   },
   "name":"Game Jam",
   "resources":[
+    {"id":{"name":"fmt_roman_huge","path":"fonts/fmt_roman_huge/fmt_roman_huge.yy",},},
     {"id":{"name":"fnt_roman_small","path":"fonts/fnt_roman_small/fnt_roman_small.yy",},},
     {"id":{"name":"fnt_roman","path":"fonts/fnt_roman/fnt_roman.yy",},},
     {"id":{"name":"fnt_score","path":"fonts/fnt_score/fnt_score.yy",},},
@@ -43,10 +44,12 @@
     {"id":{"name":"obj_death","path":"objects/obj_death/obj_death.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_game_controller","path":"objects/obj_game_controller/obj_game_controller.yy",},},
+    {"id":{"name":"obj_game_over_player","path":"objects/obj_game_over_player/obj_game_over_player.yy",},},
+    {"id":{"name":"obj_game_over","path":"objects/obj_game_over/obj_game_over.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},},
+    {"id":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"spr_backdrop","path":"sprites/spr_backdrop/spr_backdrop.yy",},},
     {"id":{"name":"spr_boost","path":"sprites/spr_boost/spr_boost.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
@@ -62,7 +65,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"roomId":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

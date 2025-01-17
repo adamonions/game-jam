@@ -1,15 +1,15 @@
 function is_on_ground() {
     return physics_test_overlap(bbox_left + 2, bbox_bottom + 2, direction,  obj_collision) ||
-            physics_test_overlap(bbox_right - 2, bbox_bottom + 2, direction, obj_collision);
+           physics_test_overlap(bbox_right - 2, bbox_bottom + 2, direction, obj_collision);
 }
 
 function is_ground_above() {
     return physics_test_overlap(bbox_left + 2, bbox_top + 2, direction,  obj_collision) ||
-                physics_test_overlap(bbox_right - 2, bbox_top+ 2, direction, obj_collision); 
+           physics_test_overlap(bbox_right - 2, bbox_top+ 2, direction, obj_collision); 
 }
 
 function get_jump_force() {
-    return -jump_force * (1 + obj_game_controller.current_speed/5 + obj_game_controller.jumps/5)
+    return -jump_force * (1 + obj_game_controller.current_speed/10 + obj_game_controller.jumps/10)
 }
 
 function get_keys(keys) {
